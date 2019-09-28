@@ -1,7 +1,7 @@
 spring:
   datasource:
     name: db
-    url: jdbc:mysql://你的数据库地址:${MYSQL_PORT:3306}/${DB_NAME:你的数据库名称}?useUnicode=true&characterEncoding=UTF8
+    url: jdbc:mysql://39.106.147.194:${MYSQL_PORT:3306}/${DB_NAME:digitalshop_v2}?useUnicode=true&characterEncoding=UTF8
     username : ${MYSQL_USERANME:root}
     password : ${MYSQL_PASSWORD:123456}
     # 使用druid数据源
