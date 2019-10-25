@@ -20,9 +20,28 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
-#    show-sql: true
+    show-sql: true
   thymeleaf:
     cache: false
+
+  nacos:
+    discovery:
+      server-addr: 39.106.147.194:8848
+
+
+redis:
+    pool:
+         maxActive: 300
+         maxIdle: 100
+         maxWait: 1000
+    host: 39.106.147.194
+    port:  6379
+    password:
+    timeout: 2000
+    sysName: phixtre
+    enable: true
+    database: 0
+
 
 server:
   port: 8088

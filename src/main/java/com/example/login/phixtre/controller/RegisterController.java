@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
  * @Date: 2019/7/31
  */
 @RestController
-public class registerController {
+public class RegisterController {
 
     @Autowired
     private UserService service;
