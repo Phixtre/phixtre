@@ -36,4 +36,9 @@ public class RegisterController {
     public User findUserById(int id){
         return service.findUserById(id);
     }
+
+    @RequestMapping("/redisTest")
+    public String redisTest(){
+        return service.redisTest();
+    }
 }

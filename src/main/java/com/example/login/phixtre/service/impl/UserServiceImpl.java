@@ -1,5 +1,6 @@
 package com.example.login.phixtre.service.impl;
 
+import com.example.login.phixtre.common.utils.RedisUtil;
 import com.example.login.phixtre.dao.UserDao;
 import com.example.login.phixtre.entity.User;
 import com.example.login.phixtre.mapper.UserMapper;
@@ -18,6 +19,8 @@ public class UserServiceImpl implements UserService {
     private UserDao dao;
     @Autowired
     private UserMapper mapper;
+    @Autowired
+    private RedisUtil redisUtil;
 
     @Override
     public User findUser(String name, String password) {
@@ -34,5 +37,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findUserById(int userId) {
         return mapper.findUserById(userId);
+    }
+
+    @Override
+    public String redisTest() {
+        redisUtil.set("key","张工");
+        redisUtil.expire("key",10);
+        return redisUtil.get("key").toString()+"---"+redisUtil.getExpire("key");
     }
 }

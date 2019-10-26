@@ -1,54 +1,54 @@
-spring:
-  datasource:
-    name: db
-    url: jdbc:mysql://39.106.147.194:${MYSQL_PORT:3306}/${DB_NAME:digitalshop_v2}?useUnicode=true&characterEncoding=UTF8
-    username : ${MYSQL_USERANME:root}
-    password : ${MYSQL_PASSWORD:123456}
-    # 使用druid数据源
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    filters: stat
-    maxActive: 20
-    initialSize: 1
-    maxWait: 60000
-    minIdle: 1
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: select 'x'
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    poolPreparedStatements: true
-    maxOpenPreparedStatements: 20
-    show-sql: true
-  thymeleaf:
-    cache: false
-
-  nacos:
-    discovery:
-      server-addr: 39.106.147.194:8848
-
-
-redis:
-    pool:
-         maxActive: 300
-         maxIdle: 100
-         maxWait: 1000
-    host: 39.106.147.194
-    port:  6379
-    password:
-    timeout: 2000
-    sysName: phixtre
-    enable: true
-    database: 0
-
-
-server:
-  port: 8088
-  servlet:
-    context-path: /phixtre
-
-mybatis:
-  basepackage: com.example.login.phixtre
-  xmlLocation: classpath:mapper/**/*.xml
-  mapper-locations: "classpath*:mapper/*.xml"
+#spring:
+#  datasource:
+#    name: db
+#    url: jdbc:mysql://39.106.147.194:${MYSQL_PORT:3306}/${DB_NAME:digitalshop_v2}?useUnicode=true&characterEncoding=UTF8
+#    username : ${MYSQL_USERANME:root}
+#    password : ${MYSQL_PASSWORD:123456}
+#    # 使用druid数据源
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    filters: stat
+#    maxActive: 20
+#    initialSize: 1
+#    maxWait: 60000
+#    minIdle: 1
+#    timeBetweenEvictionRunsMillis: 60000
+#    minEvictableIdleTimeMillis: 300000
+#    validationQuery: select 'x'
+#    testWhileIdle: true
+#    testOnBorrow: false
+#    testOnReturn: false
+#    poolPreparedStatements: true
+#    maxOpenPreparedStatements: 20
+#    show-sql: true
+#  thymeleaf:
+#    cache: false
+#
+#  nacos:
+#    discovery:
+#      server-addr: 39.106.147.194:8848
+#
+#
+#redis:
+#    pool:
+#         maxActive: 300
+#         maxIdle: 100
+#         maxWait: 1000
+#    host: 39.106.147.194
+#    port:  6379
+#    password:
+#    timeout: 2000
+#    sysName: phixtre
+#    enable: true
+#    database: 0
+#
+#
+#server:
+#  port: 8088
+#  servlet:
+#    context-path: /phixtre
+#
+#mybatis:
+#  basepackage: com.example.login.phixtre
+#  xmlLocation: classpath:mapper/**/*.xml
+#  mapper-locations: "classpath*:mapper/*.xml"

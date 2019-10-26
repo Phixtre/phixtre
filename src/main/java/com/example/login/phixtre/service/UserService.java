@@ -14,4 +14,6 @@ public interface UserService {
     void addUser(User user);
 
     User findUserById(int userId);
+
+    String redisTest();
 }

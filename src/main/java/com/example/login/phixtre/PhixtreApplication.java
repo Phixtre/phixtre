@@ -9,8 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
-@MapperScan("com.example.login.phixtre.mapper")
 @EnableTransactionManagement
+@MapperScan("com.example.login.phixtre.mapper")
 @NacosPropertySource(dataId = "phixtre", autoRefreshed = true)
 @EnableNacosConfig(globalProperties = @NacosProperties(serverAddr = "39.106.147.194:8848"))
 public class PhixtreApplication {
